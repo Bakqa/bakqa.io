@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: gold;
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+header .containav ul {
+  display: flex;
+}
+header .containav ul li {
+  margin: 0 0.3rem;
+  transition: 0.3s ease;
+}
+header .containav ul li:hover {
+  transform: translateY(13px);
+}/*# sourceMappingURL=style.css.map */
