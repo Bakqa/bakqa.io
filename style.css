@@ -22,6 +22,65 @@ header .containav ul li {
   margin: 0 0.3rem;
   transition: 0.3s ease;
 }
-header .containav ul li:hover {
+header .containav ul li:hover, header .containav ul li.active {
   transform: translateY(13px);
+  box-shadow: -2px -2px 5px 4px rgba(146, 106, 5, 0.897);
+  border: none;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+}
+footer .socialac {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+footer .socialac ul {
+  display: flex;
+}
+footer .socialac ul li {
+  margin: 3px;
+}
+
+#lamp .pgcontent {
+  width: 100%;
+  display: block;
+}
+#lamp .pgcontent .searchcontainer {
+  float: right;
+}
+#lamp .pgcontent .searchcontainer #form {
+  background-color: #151f30;
+  width: 300px;
+  height: 43px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+}
+#lamp .pgcontent .searchcontainer #form input {
+  all: unset;
+  font: 15px system-ui;
+  color: antiquewhite;
+  height: 100%;
+  width: 100%;
+  padding: 6px 9px;
+}
+#lamp .pgcontent .row .col {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+#lamp .pgcontent .row .col .card {
+  border-radius: 19px;
+  padding: 15px;
+  text-align: center;
+  background-color: #151f30;
+}
+#lamp .pgcontent .row .col .card .thumbnail {
+  height: 350px;
+  width: 300px;
+  border-radius: 19px;
 }/*# sourceMappingURL=style.css.map */
