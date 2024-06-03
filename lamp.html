@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BAKQA |LAMP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="shortcut icon" href="/asset/r_r-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="lamp">
     <header>
       <div class="logo">
-        <img src="asset/r_r.png" alt="BAKQA's logo" width="120" />
+        <a href="index.html">
+          <img src="asset/r_r.png" alt="BAKQA's logo" width="120" />
+        </a>
       </div>
       <nav class="containav">
         <ul>
@@ -37,22 +46,101 @@
       </nav>
     </header>
     <section class="pgcontent">
-      <div class="searchcontainer">
-        <form action="search" role="search" id="form">
-          <input type="text" name="search" placeholder="Search" />
-          <input type="submit" value="Search" />
-        </form>
+      <div id="subnav">
+        <div class="filternav">
+          <ul class="categories">
+            <li class="clist"><a href="#">action & adventure</a></li>
+            <li class="clist"><a href="#">crime</a></li>
+            <li class="clist"><a href="#">drama & soap</a></li>
+            <li class="clist"><a href="#">sci-fi & fantasy</a></li>
+            <li class="clist"><a href="#">thriller & horror</a></li>
+            <li class="clist"><a href="#">documentary & history</a></li>
+          </ul>
+        </div>
+        <div class="searchcontainer">
+          <form action="search" role="search" id="form">
+            <input type="text" name="search" placeholder="Search" id="query" />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
       </div>
 
-      <div class="slider"></div>
-      <div class="row">
+      <div class="slidercontain">
+      <div class="slider">
+        <div class="item" style="background-image: url(asset/websites.jpg)">
+          <div class="content">
+            <div class="name">title 1</div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea est
+              sequi distinctio porro.
+            </div>
+            <button>watch</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="
+            background-image: url(asset/Raymond\ Poulet\,\ Original\ Color\ Lithograph\,\ S_N….jpg);
+          "
+        >
+          <div class="content">
+            <div class="name">title 2</div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea est
+              sequi distinctio porro.
+            </div>
+            <button>watch</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(asset/illustration.png)">
+          <div class="content">
+            <div class="name">title 3</div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea est
+              sequi distinctio porro.
+            </div>
+            <button>watch</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(asset/apps.jpg)">
+          <div class="content">
+            <div class="name">title 4</div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea est
+              sequi distinctio porro.
+            </div>
+            <button>watch</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(asset/Dicedbaseball.webp)"
+        >
+          <div class="content">
+            <div class="name">title 5</div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea est
+              sequi distinctio porro.
+            </div>
+            <button>watch</button>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      </div>
+      <section id="section">
+        <!-- <div class="row">
         <div class="col">
           <div class="card">
             <img src="#" alt="thumbnail" class="thumbnail"/>
             <h3>title</h3>
           </div>
         </div>
-      </div>
+      </div> -->
+      </section>
     </section>
 
     <footer>
@@ -83,5 +171,7 @@
       <div class="col contact"></div>
       <div class="col app"></div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
