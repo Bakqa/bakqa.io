@@ -8,11 +8,11 @@ const main = document.getElementById("section");
 const form = document.getElementById("form");
 const search = document.getElementById("query");
 
-returnMovies(APILINK)
+returnMovies(APILINK);
 function returnMovies(url) {
   fetch(url)
     .then((res) => res.json())
-    .then(function(data) {
+    .then(function (data) {
       console.log(data.results);
       data.results.forEach((element) => {
         const div_card = document.createElement("div");
@@ -48,15 +48,73 @@ form.addEventListener("submit", (e) => {
 
 // slider functionality
 
-let next =document.querySelector('.next')
-let prev =document.querySelector('.prev')
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
 
-next.addEventListener('click', function(){
-  let items=document.querySelectorAll('.item')
-  document.querySelector('.slider').appendChild(items[0])
-})
+next.addEventListener("click", function () {
+  let items = document.querySelectorAll(".item");
+  document.querySelector(".slider").appendChild(items[0]);
+});
 
-prev.addEventListener('click', function(){
-  let items=document.querySelectorAll('.item')
-  document.querySelector('.slider').prepend(items[items.length-1])
-})
+prev.addEventListener("click", function () {
+  let items = document.querySelectorAll(".item");
+  document.querySelector(".slider").prepend(items[items.length - 1]);
+});
+
+//  <!-- function for popup viewer -->
+let popupViews = document.getElementsByClassName(".popup-view");
+let popupBtns = document.getElementsByClassName(".popup-btn");
+let closeBtns = document.getElementsByClassName(".close-btn");
+//  <!-- quickview function -->
+let popup = function (popupClick) {
+  popupViews[popupClick].classList.add("active");
+};
+popupBtns.forEach((popupBtn, i) => {
+  popupBtn.addEventListener("click", () => {
+    popup(i);
+  });
+});
+
+// function for closeBtn
+
+closeBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    popupViews.forEach((popupView) => {
+      popupView.classList.remove("active");
+    });
+  });
+});
+
+
+
+// slider functionality
+let slideIndex =1;
+showSlides(slideIndex);
+
+function plusSlides(n){
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if(n > slides.length){
+    slideIndex = 1;
+  }
+  if(n < 1){
+    slideIndex = slides.length;
+  }
+  for(i = 0; i < slides.length; i++){
+    slides[i].style.display = "none";
+  }
+  for(i = 0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

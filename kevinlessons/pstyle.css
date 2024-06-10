@@ -1,0 +1,94 @@
+:root {
+  --timing: 700ms;
+  --rotation: 20deg;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  perspective: 1000px;
+  color-scheme: dark;
+  background-color: darkcyan;
+}
+
+img {
+  max-width: 100%;
+}
+.hova {
+  width: 300px;
+  aspect-ratio: 9/16;
+  position: relative;
+  transition: rotate var(--timing);
+
+  .bg-img {
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .logo,
+  .front-img {
+    position: absolute;
+}
+.logo {
+      opacity: 0;
+      z-index: 100;
+      transition: var(--timing);
+      scale: 1.35;
+      transform-origin: bottom;
+      bottom: 0;
+  }
+  .front-img {
+    z-index: 1000;
+    width: 75%;
+    margin-inline: auto;
+    inset: auto 0 2rem;
+    transition: var(--timing);
+  }
+
+  &:hover {
+    rotate: x var(--rotation);
+
+    .front-img {
+      transform: translateY(-2rem) translateZ(-30px);
+      
+      rotate: x calc(var(--rotation) * -1);
+    }
+    .logo{
+        opacity: 1;
+        transform: translateY(-2rem) translateZ(-28px);
+
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    translate: 0;
+    background-image: radial-gradient(circle, transparent 90px, rgb(10, 0, 0));
+    z-index: 100;
+    opacity: 0;
+    transition: opacity var(--timing);
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 1.5rem;
+    translate: 0;
+    background: rgb(17, 3, 3);
+    filter: blur(1rem);
+    z-index: 1;
+    transition: translate var(--timing);
+  }
+  &:hover::after {
+    rotate: x calc(--rotation) * -1;
+    translate: 0 60px;
+  }
+}
