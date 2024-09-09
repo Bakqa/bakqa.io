@@ -1,6 +1,30 @@
 :root {
   --timing: 700ms;
   --rotation: 20deg;
+  --clr-pry: teal;
+  --clr-sec: #ffba04;
+  --clr-tmkt: #e9825d;
+  --clr-ply: #565e85;
+  --clr-lamp: #e84d51;
+  --clr-drkb: #612122;
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-gray-dark: #333;
+  --clr-txt: hsl(22, 24%, 32%);
+  --clr-shdw: hsla(22, 100%, 8%, 0.2);
+  --box-shadow: -2px -2px 5px 4px rgba(146, 106, 5, 0.897);
+  --bxshdw-sm-img: drop-shadow(0 4px 16px var(--clr-shdw));
+  --bxshdw-bg-img: drop-shadow(0 8px 24px var(--clr-shdw));
+  --ff-pry: ;
+  --ff-title: ;
+  --ff-subtitle: ;
+  --ff-txt: ;
+  --fz-span: 0.6rem;
+  --fz-md: 0.938rem;
+  --fz-sm: 0.813rem;
+  --fw-rg: 400;
+  --fw-md: 500;
+  --fw-semi-bold: 600;
 }
 
 * {
@@ -52,24 +76,136 @@ header .containav ul li:hover, header .containav ul li.active {
   box-shadow: -2px -2px 5px 4px rgba(146, 106, 5, 0.897);
   border: none;
 }
+header .containav ul li span {
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: cursive;
+  font-size: 24px;
+  border: 2px solid teal;
+  padding: 0 5px;
+}
+header .containav ul li #tm {
+  background-color: var(--clr-tmkt);
+}
+header .containav ul li #g {
+  background-color: var(--clr-ply);
+}
+header .containav ul li #l {
+  background-color: var(--clr-lamp);
+}
 
 footer {
-  display: flex;
-  width: 100%;
-  background-color: rgba(145, 23, 23, 0.904);
-  padding: 8px;
+  background-color: var(--clr-drkb);
+  color: #fff;
+  padding: 20px 0;
 }
-footer .socialac {
+footer .container {
+  max-width: 1170px;
+  margin: auto;
+}
+footer .container .row {
   display: flex;
+  flex-wrap: wrap;
+}
+footer .container .row ul {
+  list-style: none;
+}
+footer .container .row ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .container .row ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+footer .container .row ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+footer .container .row p a {
+  color: var(--ff-txt);
+}
+footer .container .row p a:hover {
+  color: var(--clr-sec);
+}
+footer .container .row .footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+footer .container .row .footer-col h5 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+footer .container .row .footer-col h5::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+footer .container .row .footer-col .socials .social {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+footer .container .row .footer-col .socials .social:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+footer .container .row form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+}
+footer .container .row form input[type=email], footer .container .row form textarea {
   width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
 }
-footer .socialac ul {
-  display: flex;
+footer .container .row form button[type=submit] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-footer .socialac ul li {
-  margin: 3px;
+footer .container .row form button[type=submit]:hover {
+  background-color: #3e8e41;
+}
+footer .container .copyrite {
+  width: 100%;
+  bottom: 2px;
+  text-align: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #9e9e9e;
+  background-color: var(--clr-lamp);
+}
+footer .container .copyrite:hover {
+  color: var(--clr-sec);
 }
 
 .slidercontain {
@@ -216,6 +352,21 @@ footer .socialac ul li {
   width: 100%;
   padding: 6px 9px;
 }
+.pgcontent .contain {
+  display: block;
+  width: 100%;
+  height: 480px;
+  margin: 3px 0;
+}
+.pgcontent .themarket {
+  background-color: var(--clr-tmkt);
+}
+.pgcontent .lamp {
+  background-color: var(--clr-lamp);
+}
+.pgcontent .game {
+  background-color: var(--clr-ply);
+}
 
 #section {
   position: relative;
@@ -254,56 +405,32 @@ footer .socialac ul li {
     filter: blur(0px);
   }
 }
-@media (max-width: 900px) {
-  #theMarket .cardcontent .product .popup-view .popup-card {
-    flex-direction: column;
-    width: 550px;
-    height: auto;
+@media screen and (max-width: 750px) {
+  header {
+    background-color: var(--clr-drkb);
   }
-  #theMarket .cardcontent .product .popup-view .popup-card .product-img {
-    z-index: 3;
+  header .logo a {
     width: 100%;
-    height: 200px;
-    transform: translateY(0);
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
-  #theMarket .cardcontent .product .popup-view .popup-card .product-img img {
-    left: initial;
-    max-width: 100%;
+  header .containav a img {
+    display: none;
   }
-  #theMarket .cardcontent .product .popup-view .popup-card .info {
+  header .containav a span {
+    display: unset !important;
+  }
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .row .footer-col {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .row .footer-col {
+    display: block;
     width: 100%;
-    height: auto;
-    padding: 20px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .info h2 {
-    margin: 20px 5px 5px 5px;
-    font-size: 25px;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .info h2 span {
-    font-size: 10px;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .info p {
-    margin: 5px;
-    font-size: 13px;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .info .price {
-    margin: 5px;
-    font-size: 30px;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .info .cart-btn {
-    margin: 5px auto;
-    padding: 5px 40px;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .info .add {
-    font-size: 14px;
-  }
-  #theMarket .cardcontent .product .popup-view .popup-card .close-btn {
-    z-index: 4;
   }
 }
 .cardcontent {

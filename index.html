@@ -18,21 +18,33 @@
     <header>
       <div class="logo">
         <a href="index.html">
-          <img src="asset/r_r.png" alt="BAKQA's logo" width="120" class="r-logo" />
-          <img src="asset/icon/logor-r.png" alt="icon" class="icon" width="120">
+          <img
+            src="asset/r_r.png"
+            alt="BAKQA's logo"
+            width="120"
+            class="r-logo"
+          />
+          <img
+            src="asset/icon/logor-r.png"
+            alt="icon"
+            class="icon"
+            width="120"
+          />
         </a>
       </div>
       <nav class="containav">
         <ul>
           <li>
             <a href="theMarket.html"
-              ><img src="asset/theMarket.png" alt="theMarket" width="150"
-            /></a>
+              ><img src="asset/theMarket.png" alt="theMarket" width="150" />
+              <span id="tm">tM</span></a
+            >
           </li>
           <li>
             <a href="game.html"
-              ><img src="asset/gamerAccount.png" alt="Game" width="150"
-            /></a>
+              ><img src="asset/gamerAccount.png" alt="Game" width="150" />
+              <span id="g">G</span></a
+            >
           </li>
           <li>
             <a href="lamp.html"
@@ -41,41 +53,76 @@
                 alt="LAMP"
                 width="150"
                 title="Lencho Animation Media Platform"
-            /></a>
+              />
+              <span id="l">L</span></a
+            >
           </li>
         </ul>
       </nav>
     </header>
     <section class="pgcontent">
       <div class="slider"></div>
+      <div class="themarket contain"></div>
+      <div class="game contain"></div>
+      <div class="lamp contain"></div>
     </section>
     <footer>
-      <div class="col social">
-        <div class="ftlogo">
-          <img src="asset/r_r-icon.png" alt="BAKQA" width="80" />
-        </div>
-        <div class="socialac">
-          <ul>
-            <li>
-              <a href=""><img src="asset/1.png" alt="facebook" width="30" /></a>
-            </li>
-            <li>
-              <a href=""
-                ><img src="asset/2.png" alt="instagram" width="30"
-              /></a>
-            </li>
-            <li>
-              <a href=""><img src="asset/3.png" alt="twitter" width="30" /></a>
-            </li>
-            <li>
-              <a href=""><img src="asset/4.png" alt="youtube" width="30" /></a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <div class="logo">
+              <img src="asset/r_r-icon.png" alt="BAKQA" width="80" />
+            </div>
+            
+            <div class="socials">
+              <a class="social" href="#" target="_blank">
+                <i class="fa-brands fa-square-facebook fa-2xl"></i>
+              </a>
+              <a class="social" href="#" target="_blank">
+                <i class="fa-brands fa-square-instagram fa-2xl"></i>
+              </a>
+              <a class="social" href="#" target="_blank">
+                <i class="fa-brands fa-square-twitter fa-2xl"></i>
+              </a>
+              <a class="social" href="#" target="_blank">
+                <i class="fa-brands fa-square-youtube fa-2xl"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul class="navfoot">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <p><a href="#">Terms&Conditions</a></p>
+          </div>
+          <div class="footer-col">
+            <h5>FAQ</h5>
+            <ul class="faq">
+              <li><a href="#">What is our return policy?</a></li>
+              <li><a href="#">How do I track my order?</a></li>
+              <li><a href="#">What forms of payment do you accept?</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact Us</h5>
+
+            <form class="contact">
+              <input type="email" placeholder="Email" required />
+
+              <textarea placeholder="Message" required></textarea>
+
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <h4 class="copyrite">
+            &copy; All Rights reserved by BAKQA &reg; 2024
+          </h4>
         </div>
       </div>
-      <div class="col navit"></div>
-      <div class="col contact"></div>
-      <div class="col app"></div>
     </footer>
   </body>
 </html>
