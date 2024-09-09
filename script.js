@@ -118,12 +118,3 @@ function showSlides(n){
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
-//  <!-- contact us form -->
-// Add event listener to the submit button
-document.querySelector('button[type="submit"]').addEventListener('click', (event) => {
-  event.preventDefault();
-  const email = document.querySelector('input[type="email"]').value;
-  const message = document.querySelector('textarea').value;
-  // Send the email and message to the server using AJAX or email API
-  });
