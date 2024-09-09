@@ -77,6 +77,24 @@ header .containav ul li:hover, header .containav ul li.active {
   box-shadow: -2px -2px 5px 4px rgba(146, 106, 5, 0.897);
   border: none;
 }
+header .containav ul li span {
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: cursive;
+  font-size: 24px;
+  border: 2px solid teal;
+  padding: 0 5px;
+}
+header .containav ul li #tm {
+  background-color: var(--clr-tmkt);
+}
+header .containav ul li #g {
+  background-color: var(--clr-ply);
+}
+header .containav ul li #l {
+  background-color: var(--clr-lamp);
+}
 
 .slidercontain {
   position: relative;
